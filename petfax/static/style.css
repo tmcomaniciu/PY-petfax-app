@@ -1,80 +1,105 @@
+/* VARIABLES */
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Abel&family=Bowlby+One&display=swap");
+:root {
+  /* fonts */
+  --header-font: "Bowlby One", impact;
+  --accent-font: "Abel", verdana;
+  --body-font: "ABeeZee", helvetica;
+  /* colors */
+  --light-accent: #f5f3eb;
+  --main-accent: #7fa4ad;
+  --second-accent: #de9d49;
+}
+
+/* GENERAL */
 body {
-  background-color: antiquewhite;
+  background: var(--light-accent);
+  font-family: var(--body-font);
+}
+.container {
+  width: 50%;
+  margin: 2em auto;
+  padding: 1em 3em 3em 3em;
+  border-radius: 1em;
+  background: white;
+  box-shadow: 2px 2px #ddd;
+}
+h1 {
+  margin: 0;
+  color: var(--main-accent);
+  font-family: "Bowlby One", impact;
+  font-size: 4em;
   text-align: center;
 }
-
-.pets_container {
-  background-color: white;
-  width: 80%;
-  height: 80%;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 10px, 10px, 10px, grey;
-  margin: 0 auto;
-  text-align: center;
+h2 {
+  color: var(--second-accent);
+  margin: 0.5em 0;
 }
-
-img {
-  width: 400px;
-}
-
-.home_title {
-  font-size: 50px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-h3 {
-  font-size: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.pet_indv {
-  display: inline-block;
-  text-align: center;
-  background-color: antiquewhite;
-  width: 60%;
-  padding: 20px;
-  border-radius: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 a {
-  color: black;
-  font-size: 17px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--accent-font);
+  text-decoration: none;
+  color: var(--main-accent);
 }
-
-footer {
-  padding-top: 20px;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.pets {
-  margin: 0 auto;
+.callout {
+  background: #eee;
+  padding: 0.5em;
+  border-radius: 1em;
   text-align: center;
+  font-family: var(--accent-font);
+  font-weight: 400;
 }
 
-p {
-  font-size: 20px;
+/* PETS */
+.pets-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+.pets-container img {
+  width: 100%;
+  border-radius: 1em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.pet {
+  width: 46%;
+  margin: 0 0.5em;
 }
 
-.font_title {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+/* FACTS */
+.facts-container {
+  width: 100%;
+  margin-bottom: 1em;
 }
-
-form {
-  padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  padding: 1em;
+  box-sizing: border-box;
 }
-
-label {
-  font-size: 20px;
+textarea {
+  resize: vertical;
 }
-
-input {
-  margin: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 15px;
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--main-accent);
+}
+input[type="submit"] {
+  border: none;
+  background: var(--second-accent);
+  font-family: var(--header-font);
+  font-size: 1em;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  padding: 0.5em;
+  transition-property: background;
+  transition-duration: 0.2s;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: var(--main-accent);
 }
