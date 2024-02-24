@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PetFax</title>
+    <title>PetFax | Add Your Own Fun Fact</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
-    <h1>Welcome to PetFax</h1>
-    {% for pet in pets %}
-    <h2>{{ pet.pet_name }}</h2>
-    <img src="{{ pet.pet_photo }}" alt="Photo of pet" />
-    <a href="/pets/{{ pet.pet_id }}">Learn more:</a>
-    {% endfor %}
-    <a href="/facts/new">Add your own fact here:</a>
+    <h1 class="font_title">Add Your Own Fact!</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" name="name" />
+      <br />
+      <label for="fact">Fact:</label>
+      <input type="text" name="fact" />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <a href="/pets">Go back to Pets</a>
   </body>
 </html>

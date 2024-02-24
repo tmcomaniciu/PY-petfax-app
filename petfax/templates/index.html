@@ -3,14 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PetFax</title>
+    <title>PetFax | Adopt, Don't Shop</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
-    <h1>Welcome to PetFax</h1>
-    {% for pet in pets %}
-    <h2>{{ pet.pet_name }}</h2>
-    <img src="{{ pet.pet_photo }}" alt="Photo of pet" />
-    <p>{{ pet.pet_fact }}</p>
-    {% endfor %}
+    <div class="pets_container">
+      <header>
+        <h1 class="home_title">Welcome to PetFax!</h1>
+        <h3>Take a look at our adoptable pets.</h3>
+      </header>
+      <main class="pet_indv">
+        {% for pet in pets %}
+        <h2>{{ pet.pet_name }}</h2>
+        <img src="{{ pet.pet_photo }}" alt="Photo of pet" />
+        <br />
+        <a href="/pets/{{ pet.pet_id }}">Learn more:</a>
+        <br />
+        {% endfor %}
+      </main>
+      <footer>
+        <a href="/facts/new">Add your own fact here:</a>
+      </footer>
+    </div>
   </body>
 </html>

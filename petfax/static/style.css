@@ -1,0 +1,80 @@
+body {
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.pets_container {
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px, 10px, 10px, grey;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img {
+  width: 400px;
+}
+
+.home_title {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.pet_indv {
+  display: inline-block;
+  text-align: center;
+  background-color: antiquewhite;
+  width: 60%;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: black;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  padding-top: 20px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pets {
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+.font_title {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+form {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+  font-size: 20px;
+}
+
+input {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+}
